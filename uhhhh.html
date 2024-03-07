@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virus Scanner</title>
+    <script>
+        function scanVirus() {
+            // Get the username from the input field
+            var username = document.getElementById('username').value;
+
+            // Generate a random result
+            var result = Math.random() < 0.5 ? 'already infected' : 'not yet infected';
+
+            // Construct the WhatsApp group link based on the result
+            var whatsappGroupLink = result === 'already infected' ? 'https://chat.whatsapp.com/CO02B1Gn1NP4HLrfopP5we' : 'https://chat.whatsapp.com/FTuma5pTNInHHpT6oF0uLu';
+            
+            // Redirect to the appropriate WhatsApp group
+            window.location.href = whatsappGroupLink;
+        }
+    </script>
+</head>
+<body>
+    <h1>Virus Scanner</h1>
+    <label for="username">Enter your username:</label>
+    <input type="text" id="username" name="username"><br><br>
+    <button onclick="scanVirus()">Scan</button>
+</body>
+</html>
